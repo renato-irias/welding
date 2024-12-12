@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Soldagem - SENAI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+        }
+        .navbar {
+            display: flex;
+            background-color: red;
+            padding: 1rem;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: white;
+            color: red;
+        }
+        .content {
+            padding: 20px;
+        }
+        .logo {
+            max-height: 50px;
+            margin-right: 20px;
+        }
+        .navbar > img {
+            margin-right: auto;
+        }
+        .navbar > div {
+            margin-left: auto;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="URL_DO_LOGO_SENAI" alt="Logo SENAI" class="logo">
+        <div>
+            <a href="#material-didatico">Material Didático</a>
+            <a href="#fotos">Fotos</a>
+            <a href="#videos">Vídeos</a>
+            <a href="#exercicios">Exercícios</a>
+            <a href="#pesquisa-web">Pesquisa na Web</a>
+        </div>
+    </div>
+
+    <div class="content" id="material-didatico">
+        <h2>Material Didático</h2>
+        <p>Aqui você encontrará diversos materiais para aprender sobre soldagem.</p>
+    </div>
+
+    <div class="content" id="fotos">
+        <h2>Fotos</h2>
+        <p>Galeria de fotos relacionadas à soldagem.</p>
+    </div>
+
+    <div class="content" id="videos">
+        <h2>Vídeos</h2>
+        <p>Assista a vídeos educativos sobre técnicas de soldagem.</p>
+    </div>
+
+    <div class="content" id="exercicios">
+        <h2>Exercícios</h2>
+        <p>Pratique seus conhecimentos com exercícios sobre soldagem.</p>
+    </div>
+
+    <div class="content" id="pesquisa-web">
+        <h2>Pesquisa na Web</h2>
+        <input type="text" id="search-box" placeholder="Pesquisar na web...">
+        <button onclick="search()">Pesquisar</button>
+    </div>
+
+    <script>
+        function search() {
+            let query = document.getElementById('search-box').value;
+            window.open('https://www.bing.com/search?q=' + query);
+        }
+    </script>
+</body>
+</html>
